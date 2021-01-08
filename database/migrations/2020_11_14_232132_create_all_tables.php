@@ -18,7 +18,7 @@ class CreateAllTables extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->string('token');
+            $table->string('token')->nullable();
             $table->string('admin');
         });
 
@@ -38,9 +38,8 @@ class CreateAllTables extends Migration
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
             $table->string('ip');
-            $table->string('page');
-            $table->dateTime('view_date');
-            $table->integer('total');
+            $table->string('date_access');
+            $table->dateTime('page');
         });
     }
 

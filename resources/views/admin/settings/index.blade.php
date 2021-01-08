@@ -24,37 +24,37 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Título do site</label>
                     <div class="col-sm-10">
-                        <input type="text" name="title" value="{{(empty($settings) ? '': $settings['title'])}}" class="form-control">
+                        <input type="text" name="title" value="{{(empty($settings) ? ' ' :  $settings['title'])}}" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Subtitulo do site</label>
                     <div class="col-sm-10">
-                        <input type="text" name="subtitle" class="form-control" value="{{(empty($settings) ? '': $settings['subtitle'])}}">
+                        <input type="text" name="subtitle" class="form-control" value="{{(empty($settings) ? ' ' : $settings['subtitle'])}}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Contato</label>
                     <div class="col-sm-10">
-                        <input type="text" name="contact" value="{{(empty($settings) ? '': $settings['contact'])}}" class="form-control">
+                        <input type="text" name="contact" value="{{(empty($settings) ? ' ' : $settings['contact'])}}" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Twitter</label>
                     <div class="col-sm-10">
-                        <input type="text" name="twitter" value="{{(empty($settings) ? '': $settings['twitter'])}}" class="form-control">
+                        <input type="text" name="twitter" value="{{(empty($settings) ? ' ' : $settings['twitter'])}}" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Facebook</label>
                     <div class="col-sm-10">
-                        <input type="text" name="facebook" value="{{(empty($settings) ? '': $settings['facebook'])}}" class="form-control">
+                        <input type="text" name="facebook" value="{{(empty($settings) ? ' ' : $settings['facebook'])}}" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Instagram</label>
                     <div class="col-sm-10">
-                        <input type="text" name="instagram" value="{{(empty($settings) ? '': $settings['instagram'])}}" class="form-control">
+                        <input type="text" name="instagram" value="{{(empty($settings) ? ' ' : $settings['instagram'])}}" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">

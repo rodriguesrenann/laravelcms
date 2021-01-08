@@ -45,12 +45,22 @@ class SettingsController extends Controller
         ]);
 
         if(!$validator->fails()) {
-            foreach($data as $itemIndex => $value) {
-                Setting::where('name', $itemIndex)->update([
-                    'content' => $value
-                ]);
+            $settings = Setting::count();
+            if($settings <= 0) {
+                foreach($data as $key => $value) {
+                    $newSetting = new Setting();
+                    $newSetting->name = $key;
+                    $newSetting->content = $value;
+                    $newSetting->save();
+                }
+            }else{
+                foreach($data as $itemIndex => $value) {
+                    Setting::where('name', $itemIndex)->update([
+                        'content' => $value
+                    ]);
+                }
             }
-
+        
             return redirect()->route('settings');
         }
 
